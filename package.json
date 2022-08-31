@@ -1,6 +1,6 @@
 {
   "name": "react-state-sub",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "State Manager for React (very easy to use)",
   "main": "index.js",
   "repository": {

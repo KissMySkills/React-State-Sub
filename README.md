@@ -36,7 +36,7 @@ const store = {
 export default new ReactStateSub(store);
 ```
 
-### Then import and use
+### Then import into your components and use
 
 ```js
 // CounterValue.jsx

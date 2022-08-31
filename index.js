@@ -4,13 +4,13 @@ class StateSub{
 	
 	constructor(store){
 		for(let state in store.initialState){
-			this.#newState(state, store.initialState[state]); // transferring initial states to store
+			this.__newState(state, store.initialState[state]); // transferring initial states to store
 		}
 		delete store.initialState; // clearing initial states
 		Object.defineProperty(this, 'subTo', { // defining the subscription function
 			value: function(stateName){
-				if(stateName in this.#states){
-					return useSyncExternalStore(this.#subscribe.bind(this, stateName), () => this.#states[stateName]);
+				if(stateName in this.__states){
+					return useSyncExternalStore(this.__subscribe.bind(this, stateName), () => this.__states[stateName]);
 				}
 				return undefined; // when someone tries to subscribe to an undefined state, the subscription will be skipped and returned "undefined"
 			}
@@ -18,36 +18,36 @@ class StateSub{
 		this.__proto__ = store;
 	}
 
-	#newState(stateName, value){ // defining accessors from initialState
-		this.#states[stateName] = value;
+	__newState(stateName, value){ // defining accessors from initialState
+		this.__states[stateName] = value;
 		Object.defineProperty(this, stateName, {
 			get(){
-				return this.#states[stateName];
+				return this.__states[stateName];
 			},
 			set(value){
-				this.#states[stateName] = value;
-				this.#broadcast(stateName); // broadcast to subscribers after any setting a new value to state. 
+				this.__states[stateName] = value;
+				this.__broadcast(stateName); // broadcast to subscribers after any setting a new value to state. 
 			}
 		});
 	}
 
-	#subscribe(stateName, f){
-		if(!(stateName in this.#subsribers)){ // create a new room for subscribers, if it doesnt exist
-			this.#subsribers[stateName] = new Set();
+	__subscribe(stateName, f){
+		if(!(stateName in this.__subsribers)){ // create a new room for subscribers, if it doesnt exist
+			this.__subsribers[stateName] = new Set();
 		}
-		this.#subsribers[stateName].add(f); // adding a subscriber to a room
-		return ()=> this.#subsribers[stateName].delete(f); // return "subCleaner" for useSyncExternalStore (used when unmounting the component)
+		this.__subsribers[stateName].add(f); // adding a subscriber to a room
+		return ()=> this.__subsribers[stateName].delete(f); // return "subCleaner" for useSyncExternalStore (used when unmounting the component)
 	}
 
-	#broadcast(stateName){
-		if(stateName in this.#subsribers){
-			this.#subsribers[stateName].forEach(f => f());
+	__broadcast(stateName){
+		if(stateName in this.__subsribers){
+			this.__subsribers[stateName].forEach(f => f());
 		}
 	}
 
-	#states = {}
+	__states = {}
 
-	#subsribers = {}
+	__subsribers = {}
 };
 
 export default StateSub;

@@ -105,3 +105,7 @@ What the...<br/>
 Yes, you can change your states directly!
 
 ## Enjoy!
+
+### Attention
+You can't use name "subTo" for your initial states or store functions, primitives etc.<br/>
+It will be fixed later.

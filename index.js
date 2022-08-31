@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react';
 
-class reactStateSub{
+class StateSub{
 	
 	constructor(store){
 		for(let state in store.initialState){
@@ -50,4 +50,4 @@ class reactStateSub{
 	#subsribers = {}
 };
 
-export default reactStateSub;
+export default StateSub;

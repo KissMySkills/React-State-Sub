@@ -56,8 +56,8 @@ function CounterMenu() {
     const increment = store.increment.bind(store);
     const decrement = store.decrement.bind(store);
     return (<div>
-        <button onClick={increment}>Increment</button>;
-        <button onClick={decrement}>Decrement</button>;
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
     </div>);
 }
 ```
@@ -78,8 +78,9 @@ const store = {
 };
 
 export default new ReactStateSub(store);
+```
 
-
+```js
 // CounterValue.jsx
 import store from './store.js';
 
@@ -93,8 +94,12 @@ import store from './store.js';
 
 function CounterMenu() {
     return (<div>
-        <button onClick={e => store.counter++}>Increment</button>; // What the...
-        <button onClick={e => store.counter--}>Decrement</button>; // Yes, you can change your states directly!
+        <button onClick={e => store.counter++}>Increment</button>
+        <button onClick={e => store.counter--}>Decrement</button>
     </div>);
 }
 ```
+What the...<br/>
+Yes, you can change your states directly!
+
+## Enjoy!

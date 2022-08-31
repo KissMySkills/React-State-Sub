@@ -1,6 +1,8 @@
 # React-State-Sub
 
-Fast and scalable state-manager for apps based on React JS.
+Fast and scalable state-manager for apps based on React JS.<br/>
+Required React 18+.
+
 
 ## Installation
 

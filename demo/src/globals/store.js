@@ -1,4 +1,4 @@
-import ReactStateSub from 'react-state-sub';
+import StateSub from 'react-state-sub';
 
 const store = {
 	initialState:{ // after initialization, all initial states will be defined at the top level of this store
@@ -44,4 +44,4 @@ const store = {
 	}
 };
 
-export default new ReactStateSub(store);
+export default new StateSub(store);

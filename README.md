@@ -16,7 +16,7 @@ npm i react-state-sub
 
 ```js
 // store.js
-import ReactStateSub from 'react-state-sub';
+import StateSub from 'react-state-sub';
 
 const store = {
     // add your states inside the "initialState"
@@ -35,7 +35,7 @@ const store = {
     }
 };
 
-export default new ReactStateSub(store);
+export default new StateSub(store);
 ```
 
 ### Then import into your components and use
@@ -70,7 +70,7 @@ function CounterMenu() {
 
 ```js
 // store.js
-import ReactStateSub from 'react-state-sub';
+import StateSub from 'react-state-sub';
 
 const store = {
     initialState: {
@@ -79,7 +79,7 @@ const store = {
     // without any methods
 };
 
-export default new ReactStateSub(store);
+export default new StateSub(store);
 ```
 
 ```js

@@ -5,17 +5,17 @@ Removed a private object properties.<br/>
 #### Before
 ```js
 const obj = {
-	#propertyName(){
-		//...
-	}
+    #propertyName(){
+        //...
+    }
 };
 ```
 
 #### Now
 ```js
 const obj = {
-	__propertyName(){
-		//...
-	}
+    __propertyName(){
+        //...
+    }
 };
 ```

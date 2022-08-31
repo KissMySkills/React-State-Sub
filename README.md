@@ -3,6 +3,8 @@
 Fast and scalable state-manager for apps based on React JS.<br/>
 Required React 18+.
 
+[Sandbox counter demo](https://codesandbox.io/s/weathered-moon-7y66ns)<br/>
+[Sandbox todos demo](https://codesandbox.io/s/inspiring-ioana-12xbqr)
 
 ## Installation
 

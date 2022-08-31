@@ -55,10 +55,10 @@ function CounterMenu() {
     // binding, because we use "this" in the store function (this is optional)
     const increment = store.increment.bind(store);
     const decrement = store.decrement.bind(store);
-    return <>
+    return (<div>
         <button onClick={increment}>Increment</button>;
         <button onClick={decrement}>Decrement</button>;
-    </>
+    </div>);
 }
 ```
 
@@ -92,9 +92,9 @@ function CounterValue() {
 import store from './store.js';
 
 function CounterMenu() {
-    return <>
+    return (<div>
         <button onClick={e => store.counter++}>Increment</button>; // What the...
         <button onClick={e => store.counter--}>Decrement</button>; // Yes, you can change your states directly!
-    </>
+    </div>);
 }
 ```

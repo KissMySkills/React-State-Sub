@@ -1,7 +1,7 @@
 import ReactStateSub from 'react-state-sub';
 
 const store = {
-	initialState:{ // all initial states will be defined at the upper level of this store
+	initialState:{ // after initialization, all initial states will be defined at the top level of this store
 		name: '',   // todo name
 		list: [],   // todo list
 		history: {} // todo history list

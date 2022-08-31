@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	box-sizing: border-box;
+}
+
+html, body, #root{
+	height: 100%;
+}
+
+.app{
+	display: flex;
+	justify-content: center;
+	font-family: sans-serif;
+	min-height: 100%;
+}
+
+.todo_proc,
+.todo_history{
+	margin: 20px;
+	padding: 10px;
+	box-shadow: 0px 3px 4px rgb(0 0 0 / 20%);
+	border-radius: 10px;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+}
+
+.todo_proc_name,
+.todo_history_name{
+	font-weight: 600;
+	color: #b30000;
+}
+
+.menu{
+	margin-top: 5px;
+}
+
+input{
+	width: 100%;
+	font-size: 16px;
+	padding: 5px;
+	border: 2px solid #b30000;
+	border-radius: 3px;
+}
+
+.todo_add,
+.todo_remove{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 5px;
+	background: #5e5e5e;
+	color: white;
+	user-select: none;
+}
+
+.list{
+	margin-top: 5px;
+	padding: 5px;
+	box-shadow: inset 0 3px 4px rgb(0 0 0 / 20%);
+	border-radius: 3px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.todo{
+	box-shadow: 0px 3px 4px rgb(0 0 0 / 20%);
+	border-radius: 3px;
+	padding: 5px;
+}
+
+.todo_id{
+	font-weight: 600;
+}
+
+.todo_id > span{
+	color: #b30000;
+}
+
+.todo_name{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: 30px;
+}
+
+.todo_remove{
+	margin-top: 0;
+}
+
+.todo_add:hover{
+	background: #008956;
+}
+
+.todo_remove:hover{
+	background: #810000;
+}
+
+.todo_status{
+	line-height: 30px;
+}

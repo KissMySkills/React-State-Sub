@@ -1,0 +1,24 @@
+{
+  "name": "react-state-sub",
+  "version": "0.0.1",
+  "description": "State Manager for React (very easy to use)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KissMySkills/React-State-Sub.git"
+  },
+  "keywords": [
+    "react",
+    "state",
+    "manager",
+    "subscribe",
+    "broadcast",
+    "store",
+    "reducer"
+  ],
+  "author": "Alexandr (https://github.com/KissMySkills)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

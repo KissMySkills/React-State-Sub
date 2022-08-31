@@ -45,7 +45,7 @@ export default new StateSub(store);
 import store from './store.js';
 
 function CounterValue() {
-    const counter = store.sub('counter'); // subscribe to our "counter" state
+    const counter = store.subTo('counter'); // subscribe to our "counter" state
     return <h1>Counter: {counter}</h1>;
 }
 
@@ -87,7 +87,7 @@ export default new StateSub(store);
 import store from './store.js';
 
 function CounterValue() {
-    return <h1>Counter: {store.sub('counter')}</h1>; // Hmm, does it work? - Yes!
+    return <h1>Counter: {store.subTo('counter')}</h1>; // Hmm, does it work? - Yes!
 }
 
 

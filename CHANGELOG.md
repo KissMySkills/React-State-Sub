@@ -1,3 +1,32 @@
+# 0.0.5 (2022-09-05)
+
+Added context auto-binding to store functions.<br/>
+For example, now you don't need to bind the context in handlers.
+#### Before
+```jsx
+// store.js
+const store = {
+	handler(){
+		this.state += 1;
+	}
+	//...
+};
+
+// component
+const Button = () => {
+	return <div onClick={store.handler.bind(store)}></div>
+}
+```
+
+#### Now
+```jsx
+// component
+const Button = () => {
+	return <div onClick={store.handler}></div> // store is already binded
+}
+```
+
+
 # 0.0.4 (2022-09-01)
 
 Added demos<br/>

@@ -40,7 +40,12 @@ const StateSubFunctions = {
 
 class StateSub{
 	constructor(store){
-		StateSubFunctions.__proto__ = store;
+		StateSubFunctions.__proto__ = new Proxy(store, {
+			get(target, key, receiver){
+				let value = target[key];
+				return (typeof value === 'function') ? value.bind(receiver) : value;
+			}
+		});
 		this.__proto__ = StateSubFunctions;
 		for(let state in store.initialState){
 			this.__newState(state, store.initialState[state]); // transferring initial states to store

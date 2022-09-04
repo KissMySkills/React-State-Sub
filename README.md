@@ -56,17 +56,16 @@ function CounterValue() {
 import store from './store.js';
 
 function CounterMenu() {
-    // binding, because we use "this" in the store function (this is optional)
-    const increment = store.increment.bind(store);
-    const decrement = store.decrement.bind(store);
     return (<div>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
+        <button onClick={store.increment}>Increment</button>
+        <button onClick={store.decrement}>Decrement</button>
     </div>);
 }
 ```
 
 ### That's it!
+
+---
 
 ## Usage for Crazy Dev
 

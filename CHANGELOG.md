@@ -6,15 +6,15 @@ For example, now you don't need to bind the context in handlers.
 ```jsx
 // store.js
 const store = {
-	handler(){
-		this.state += 1;
-	}
-	//...
+    handler(){
+        this.state += 1;
+    }
+    //...
 };
 
 // component
 const Button = () => {
-	return <div onClick={store.handler.bind(store)}></div>
+    return <div onClick={store.handler.bind(store)}></div>
 }
 ```
 
@@ -22,7 +22,7 @@ const Button = () => {
 ```jsx
 // component
 const Button = () => {
-	return <div onClick={store.handler}></div> // store is already binded
+    return <div onClick={store.handler}></div> // store is already binded
 }
 ```
 

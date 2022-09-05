@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0
+## 0.1.0 (2022-09-06)
 
 Now it's easier to subscribe to a state change.
 #### Before

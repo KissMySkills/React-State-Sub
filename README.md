@@ -47,7 +47,7 @@ export default new StateSub(store);
 import store from './store.js';
 
 function CounterValue() {
-    const counter = store.subTo('counter'); // subscribe to our "counter" state
+    const counter = store('counter'); // subscribe to our "counter" state
     return <h1>Counter: {counter}</h1>;
 }
 
@@ -88,7 +88,7 @@ export default new StateSub(store);
 import store from './store.js';
 
 function CounterValue() {
-    return <h1>Counter: {store.subTo('counter')}</h1>; // Hmm, does it work? - Yes!
+    return <h1>Counter: {store('counter')}</h1>; // Hmm, does it work? - Yes!
 }
 
 
@@ -107,5 +107,3 @@ Yes, you can change your states directly!
 
 ## Enjoy!
 
-### Attention
-The name "subTo" is reserved. This means you can't use name "subTo" for your initial states or store functions, primitives etc.<br/>
